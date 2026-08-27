@@ -2,7 +2,13 @@ const messageInput = document.getElementById("message-input");
 const sendButton = document.querySelector(".send-btn");
 const chatArea = document.querySelector(".chat-area");
 const welcomeScreen = document.querySelector(".welcome-screen");
+const newChatButton = document.querySelector(".new-chat-btn");
 
+console.log("New Chat button:", newChatButton);
+
+// Send message when button is clicked
+
+newChatButton.addEventListener("click", newChat);
 
 // Send message when button is clicked
 sendButton.addEventListener("click", sendMessage);
@@ -130,4 +136,22 @@ function addMessage(message, sender) {
 
     // Scroll to latest message
     chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+function newChat() {
+
+    // Remove all previous messages
+    const chatMessages = document.getElementById("chat-messages");
+
+    if (chatMessages) {
+        chatMessages.remove();
+    }
+
+    // Show welcome screen again
+    welcomeScreen.style.display = "flex";
+
+    // Clear the message box
+    messageInput.value = "";
+
+    // Put cursor back in the message box
+    messageInput.focus();
 }
