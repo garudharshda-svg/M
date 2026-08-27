@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:pink;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+.signin-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background:
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(89, 46, 180, 0.18),
+            transparent 35%
+        ),
+
+        #050713;
+}
+
+
+/* LEFT SIDE */
+
+.brand-section {
+
+    width: 45%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 60px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.brand-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 200px;
+
+    bottom: -100px;
+
+    left: -50px;
+
+    background: #633cff;
+
+    filter: blur(100px);
+
+    opacity: 0.15;
+}
+
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+.robot-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #743cff,
+            #4378ff
+        );
+
+    font-size: 35px;
+}
+
+
+.brand-logo h1 {
+
+    font-size: 58px;
+
+    letter-spacing: -3px;
+}
+
+
+.brand-logo h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cff,
+            #4d8cff
+        );
+
+    
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.brand-section h2 {
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+
+.brand-section h2 span {
+
+    color: #8b5cff;
+}
+
+
+.line {
+
+    width: 80px;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7b45ff,
+            #4c86ff
+        );
+
+    margin-bottom: 25px;
+}
+
+
+.brand-description {
+
+    max-width: 430px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #a9afc4;
+
+    margin-bottom: 55px;
+}
+
+
+/* FEATURES */
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.feature-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(120, 80, 255, 0.08);
+
+    border:
+        1px solid rgba(130, 100, 255, 0.2);
+
+    font-size: 22px;
+}
+
+
+.feature h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.feature p {
+
+    font-size: 14px;
+
+    color: #858ba1;
+}
+
+
+/* RIGHT SIDE */
+
+.form-section {
+
+    width: 55%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* CARD */
+
+.signin-card {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 55px;
+
+    background:
+        rgba(14, 18, 32, 0.9);
+
+    border:
+        1px solid rgba(130, 140, 180, 0.2);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(20px);
+}
+
+
+/* ICON */
+
+.signin-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        rgba(125, 70, 255, 0.08);
+
+    border:
+        1px solid rgba(130, 100, 255, 0.2);
+
+    font-size: 28px;
+}
+
+
+/* HEADINGS */
+
+.signin-card h1 {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #8f95a9;
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+.subtitle span {
+
+    color: #9865ff;
+}
+
+
+/* INPUT */
+
+.input-group {
+
+    margin-bottom: 22px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    color: #e3e5ec;
+}
+
+
+.input-box {
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    border-radius: 10px;
+
+    background: #0b0f1d;
+
+    border: 1px solid #272d40;
+
+    transition: 0.25s;
+}
+
+
+.input-box:focus-within {
+
+    border-color: #8255ff;
+
+    box-shadow:
+        0 0 0 3px rgba(130, 85, 255, 0.08);
+}
+
+
+.input-box > span {
+
+    opacity: 0.65;
+}
+
+
+.input-box input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.input-box input::placeholder {
+
+    color: #666d80;
+}
+
+
+/* PASSWORD BUTTON */
+
+.show-password {
+
+    border: none;
+
+    background: transparent;
+
+    color: #858ba1;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* SIGN IN BUTTON */
+
+.signin-btn {
+
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7041ff,
+            #9b4dff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    transition: 0.25s;
+}
+
+
+.signin-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(115, 60, 255, 0.35);
+}
+
+
+.arrow {
+
+    font-size: 20px;
+}
+
+
+/* DIVIDER */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 28px 0;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #292e3e;
+}
+
+
+.divider span {
+
+    color: #777d90;
+
+    font-size: 14px;
+}
+
+
+/* SIGNUP */
+
+.signup-text {
+
+    text-align: center;
+
+    color: #858b9e;
+
+    font-size: 14px;
+}
+
+
+.signup-text a {
+
+    color: #9b65ff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.signup-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .signin-container {
+
+        flex-direction: column;
+    }
+
+    .brand-section {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 40px 30px;
+
+        text-align: center;
+    }
+
+    .brand-logo {
+
+        justify-content: center;
+    }
+
+    .brand-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .features {
+
+        max-width: 450px;
+
+        margin: auto;
+
+        text-align: left;
+    }
+
+    .form-section {
+
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .signin-card {
+
+        padding: 35px 25px;
+    }
+
+    .brand-logo h1 {
+
+        font-size: 42px;
+    }
+}

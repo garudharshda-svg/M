@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyGPT - Sign In</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='signin.css') }}">
+</head>
+
+<body>
+
+<div class="signin-container">
+
+    <div class="brand-section">
+
+        <div class="brand-logo">
+            <div class="robot-icon">🤖</div>
+            <h1>My<span>GPT</span></h1>
+        </div>
+
+        <h2>Welcome <span>Back.</span></h2>
+
+        <div class="line"></div>
+
+        <p class="brand-description">
+            Continue your conversations and get things done
+            with your personal AI assistant.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <div>
+                    <h3>Smart Conversations</h3>
+                    <p>Continue where you left off.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🧠</div>
+                <div>
+                    <h3>Your AI Companion</h3>
+                    <p>Your conversations stay connected.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div>
+                    <h3>Fast & Simple</h3>
+                    <p>Sign in and get straight to work.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="form-section">
+
+        <div class="signin-card">
+
+            <div class="signin-icon">
+                👤
+            </div>
+
+            <h1>Welcome Back</h1>
+
+            <p class="subtitle">
+                Sign in to continue to <span>MyGPT</span>
+            </p>
+
+
+            <form action="{{ url_for('signin') }}" method="POST">
+
+                <div class="input-group">
+
+                    <label for="username_or_email">
+                        Username or Email
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="username_or_email"
+                            name="username_or_email"
+                            placeholder="Enter username or email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword()">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="signin-btn">
+
+                    <span>Sign In</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="{{ url_for('signup') }}">
+                    Sign Up
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='signin.js') }}"></script>
+
+</body>
+
+</html>

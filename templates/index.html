@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyChatbot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>MyChatbot</h2>
+            </div>
+
+            <button class="new-chat-btn">
+                <span>+</span>
+                New Chat
+            </button>
+
+            <div class="history-section">
+
+                <p class="history-title">History</p>
+
+                <div class="history-item">
+                    <span>💬</span>
+                    <span>My first conversation</span>
+                </div>
+
+                <div class="history-item">
+                    <span>💬</span>
+                    <span>Learning Python</span>
+                </div>
+
+                <div class="history-item">
+                    <span>💬</span>
+                    <span>What is AI?</span>
+                </div>
+
+            <div class="sidebar-bottom">
+
+                <a href="{{ url_for('signin') }}" class="auth-btn signin-btn">
+                Sign In
+                 </a>
+
+                <a href="{{ url_for('signup') }}" class="auth-btn signup-btn">
+                 Sign Up
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+
+            <!-- Welcome Screen -->
+            <div class="welcome-screen">
+
+                <div class="welcome-icon">
+                    ✦
+                </div>
+
+                <h1>Welcome to MyChatbot</h1>
+
+                <p>
+                    Your personal AI assistant.
+                    Ask me anything and let's start a conversation.
+                </p>
+
+            </div>
+
+
+            <!-- Message Input -->
+            <div class="input-container">
+
+                <div class="message-box">
+
+                    <textarea
+                        id="message-input"
+                        placeholder="Message MyChatbot..."
+                        rows="1"
+                    ></textarea>
+
+                    <button class="send-btn">
+                        ➤
+                    </button>
+
+                </div>
+
+                <p class="input-disclaimer">
+                    MyChatbot can make mistakes. Check important information.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+ <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

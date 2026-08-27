@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyGPT - Sign Up</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='signup.css') }}">
+</head>
+
+<body>
+
+<div class="signup-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="brand-section">
+
+        <div class="brand-logo">
+
+            <div class="robot-icon">
+                🤖
+            </div>
+
+            <h1>My<span>GPT</span></h1>
+
+        </div>
+
+
+        <h2>
+            Your <span>AI</span> Assistant. Your Way.
+        </h2>
+
+        <div class="line"></div>
+
+
+        <p class="brand-description">
+            Chat smarter, work faster, and learn better
+            with your personal AI companion.
+        </p>
+
+
+        <!-- FEATURES -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    💬
+                </div>
+
+                <div>
+                    <h3>Smart Conversations</h3>
+
+                    <p>
+                        Get intelligent answers to your questions.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <div>
+                    <h3>Persistent Memory</h3>
+
+                    <p>
+                        Your conversations and preferences stay with you.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <div>
+                    <h3>Private & Secure</h3>
+
+                    <p>
+                        Your personal information stays protected.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="form-section">
+
+        <div class="signup-card">
+
+            <div class="signup-icon">
+                👤+
+            </div>
+
+
+            <h1>Create Account</h1>
+
+
+            <p class="subtitle">
+                Join <span>MyGPT</span> and start your AI journey
+            </p>
+
+
+            <!-- SIGNUP FORM -->
+
+            <form action="{{ url_for('signup') }}" method="POST">
+
+
+                <!-- FULL NAME -->
+
+                <div class="input-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- USERNAME -->
+
+                <div class="input-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword('password', this)">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirm_password">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword('confirm_password', this)">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <button
+                    type="submit"
+                    class="create-btn">
+
+                    <span>Create Account</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </form>
+
+
+            <!-- ALREADY HAVE AN ACCOUNT -->
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+
+            <p class="login-text">
+
+                Already have an account?
+
+                <a href="{{ url_for('signin') }}">
+                    Sign In
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='signup.js') }}"></script>
+
+</body>
+
+</html>
